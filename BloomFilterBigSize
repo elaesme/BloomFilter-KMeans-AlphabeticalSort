@@ -1,0 +1,23 @@
+centers_old = np.zeros(centers.shape) # to store old centers
+centers_new = deepcopy(centers) # Store new centers
+
+data.shape
+clusters = np.zeros(n)
+distances = np.zeros((n,k))
+
+error = np.linalg.norm(centers_new - centers_old)
+
+# When, after an update, the estimate of that center stays the same, exit loop
+while error != 0:
+    # Measure the distance to every center
+    for i in range(k):
+        distances[:,i] = np.linalg.norm(data - centers[i], axis=1)
+    # Assign all training data to closest center
+    clusters = np.argmin(distances, axis = 1)
+    
+    centers_old = deepcopy(centers_new)
+    # Calculate mean for every cluster and update the center
+    for i in range(k):
+        centers_new[i] = np.mean(data[clusters == i], axis=0)
+    error = np.linalg.norm(centers_new - centers_old)
+centers_new  
