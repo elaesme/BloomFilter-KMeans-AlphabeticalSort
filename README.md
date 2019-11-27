@@ -20,7 +20,8 @@ In the `hashing_lib.py` are contained our hash functions:
 
 To implement our Bloom Filter structure we've dediced to build the filter as a bitarray. The big thing we want to control when creating our bloom filter is our false positive rate. To do this we'll need to have an idea of the size of our data set.
 
-The formula to calculate the size of your bit array (m = size of bit array, n = expected number of items, and p = probability percentage represented as a decimal):
-* ` -n log(p)/ log(2)^2 `
+The formula to calculate the size of your bit array (m = size of bit array, n = expected number of items, and p = probability percentage represented as a decimal, k= number of hash function used):
+* `m=  -n log(p)/ log(2)^2 `
+
 The formula to calculate the number of hashes to use (k = number of hashes to use):
-* ` - (m log(2))/n `
+* `k=  - (m log(2))/n `
