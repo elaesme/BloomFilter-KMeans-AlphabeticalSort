@@ -12,3 +12,17 @@ def counting_sort (lists):
             i += 1
     return lists
 
+def counting_sort_2 (lists):
+    temp = aux = [0] * 256
+    result = ["" for _ in lists]
+    for item in lists:
+        aux[ord(item)] += 1
+    for i in range(256):
+        aux[i] += aux[i-1]
+    for i in range(len(lists)):
+        temp[aux[ord(lists[i])]-1] = lists[i]
+        aux[ord(lists[i])] -= 1
+    for item in range(len(lists)):
+        result[item] = temp[item]
+    return result
+
