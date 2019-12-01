@@ -30,10 +30,15 @@ The formula to calculate the number of hashes to use (k = number of hashes to us
 
 
 ## 2. Alphabetical Sort
+For thid task, we implement counting sort algorithm to sort list of words alphabetically.
 
-To be commented
+In `sorting_lib.py`, there are three function:
+1. Basic Counting sort: sorting list of integer with counting sort algorithm
+2. Sorting all the letters in the alphabetically based on counting sort algorithm
+3. Sorting list of word alphabetically based on counting sort algorithm
 
 ## 3. Find similar wines!
 For this task we implemented our personal Kmeans clustering algorithm. The `clustering_lib` module contains the functions used to build kMeans, the functions used to build another implementations of Kmeans (*K-Means Min Max*, which is very similar to the first one, but it uses a different type of distance to measure distances between a point and a center of a cluster)
 
 ## 4. K-means can go wrong!
+For this task we try to prove that with different initialization of centroid, Kmeans clustering algorithm can cost the algorithm more. We compare built-in Kmeans function in `clustering_lib.py` (randomize centroid initialization) with Kmean++ algorithm(improved centroid initialization). The metrics we use to compare the result are: time execution and clustering performance. the result shown in `theoretical_lib.py`also in `main.ipynb`.
