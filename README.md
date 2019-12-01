@@ -6,9 +6,10 @@ Made by Group #6, also known as: *Sabriye Ela Esme, Octavianus Surya Putra
 Sinaga*, and *Flaminia Spasiano*.
 
 This repository contais:
-* `hashing_lib.py`: a python module that contains all the hash functions we've used to build the bloom filter.
+* `hashing_lib.py`: a python module that contains all the functions we've used to build the bloom filter.
 * `main.ipynb`: a Jupyter notebook explaines choices we've made throughout the homework. 
-
+* `sorting_lib.py`: a python module that contains all the functions we've used for task 2.
+* `clustering_lib.py`: a python module that contains all the functions we've used for task 3.
 
 ## 1. Hashing task!
 For this task we've built three hash functions, necessary to implement the Bloom Filter. 
@@ -28,6 +29,11 @@ The formula to calculate the number of hashes to use (k = number of hashes to us
 * `k=  - (m log(2))/n `
 
 
-# Alphabetical Sort
+## 2. Alphabetical Sort
 
 To be commented
+
+## 3. Find similar wines!
+For this task we implemented our personal Kmeans clustering algorithm. The `clustering_lib` module contains the functions used to build kMeans, the functions used to build another implementations of Kmeans (*K-Means Min Max*, which is very similar to the first one, but it uses a different type of distance to measure distances between a point and a center of a cluster)
+
+## 4. K-means can go wrong!
