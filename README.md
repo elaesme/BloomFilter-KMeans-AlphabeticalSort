@@ -10,6 +10,7 @@ This repository contais:
 * `main.ipynb`: a Jupyter notebook explaines choices we've made throughout the homework. 
 * `sorting_lib.py`: a python module that contains all the functions we've used for task 2.
 * `clustering_lib.py`: a python module that contains all the functions we've used for task 3.
+* ` main.ipynb`: a python notebook that collects all the choices we made, explains how the funcions we wrote are usefull and visualize the clustering for task3
 
 ## 1. Hashing task!
 For this task we've built three hash functions, necessary to implement the Bloom Filter. 
@@ -39,6 +40,8 @@ In `sorting_lib.py`, there are three function:
 
 ## 3. Find similar wines!
 For this task we implemented our personal Kmeans clustering algorithm. The `clustering_lib` module contains the functions used to build kMeans, the functions used to build another implementations of Kmeans (*K-Means Min Max*, which is very similar to the first one, but it uses a different type of distance to measure distances between a point and a center of a cluster)
+
+For the implemetation of kmeans in Map Reduce we used the same strategy used before but as output of the kmeans_Map_Reduce, since a list cannot be the key of a dictionary in Python, we have a list o list: each element is the tuple (list=coordinates of the center of the cluster, an integer that represent the index of the row in the  dataframe (normalized) that contains the point )
 
 ## 4. K-means can go wrong!
 For this task we try to prove that with different initialization of centroid, Kmeans clustering algorithm can cost the algorithm more. We compare built-in Kmeans function in `clustering_lib.py` (randomize centroid initialization) with Kmean++ algorithm(improved centroid initialization). The metrics we use to compare the result are: time execution and clustering performance. the result shown in `theoretical_lib.py`also in `main.ipynb`.
