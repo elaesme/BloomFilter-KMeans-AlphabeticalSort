@@ -37,3 +37,16 @@ def counting_sort_2 (lists):
         result[item] = temp[item]
     return result
 
+
+def counting_sort_words(lists):
+    # maximum length of word in the list
+    k = max(map(len, list))
+    # length of list
+    n = len(lists)
+    # size of aux list
+    aux_size = k + 1
+    # initiate the aux array of list with dimention nx(aux_size)
+    aux = np.zeros((n, aux_size), dtype=int)
+    for k, v in enumerate(lists):
+        # fill the element of array with number of
+        aux[k, range(len(v))] = list(map(ord, lists.lower()))
