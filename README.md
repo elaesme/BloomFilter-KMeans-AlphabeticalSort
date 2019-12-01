@@ -10,7 +10,9 @@ This repository contais:
 * `main.ipynb`: a Jupyter notebook explaines choices we've made throughout the homework. 
 * `sorting_lib.py`: a python module that contains all the functions we've used for task 2.
 * `clustering_lib.py`: a python module that contains all the functions we've used for task 3.
+* `theoretical_lib.py`: a python module to answer the theoretical question in task 4
 * ` main.ipynb`: a python notebook that collects all the choices we made, explains how the funcions we wrote are usefull and visualize the clustering for task3
+
 
 ## 1. Hashing task!
 For this task we've built three hash functions, necessary to implement the Bloom Filter. 
